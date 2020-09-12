@@ -1,0 +1,22 @@
+.leaderboard {
+  text-align: center;
+  width: 650px;
+}
+
+.leaderboard-user {
+  background-color: azure;
+  text-align: center;
+  border: grey;
+  border-width: 2px;
+}
+
+.leaderboard-image {
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  float: left;
+  margin-top: 40px;
+  margin-left: 20px;
+  display: block;
+  border-width: 40px;
+}
