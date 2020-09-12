@@ -5,11 +5,17 @@ import { Redirect } from "react-router-dom";
 
 class Logout extends Component {
   componentWillMount() {
-    this.props.dispatch(unsetAuthedUser());
+    this.props.loggedOut();
   }
   render() {
     return <Redirect to="/" />;
   }
 }
-
-export default connect()(Logout);
+function mapDispatchToProps(dispatch) {
+  return {
+    loggedOut: () => {
+      dispatch(unsetAuthedUser());
+    },
+  };
+}
+export default connect(mapDispatchToProps)(Logout);
